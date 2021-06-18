@@ -67,15 +67,22 @@ function renderArr() {
             // cardDiv.appendChild(newData)
             const classesLeftDiv = document.getElementsByClassName('leftDiv')
             const classesrightDiv = document.getElementsByClassName('rightDiv')
-            classesLeftDiv[i].textContent += ' ' + tempNode + '°C';
+            classesLeftDiv[i].textContent += ' ' + locationsArr[i];
             classesrightDiv[i].textContent += humidNode + '% Humidity';
             classesrightDiv[i].textContent += feelsLikeNode + '°C Feels like';
             rightDiv.append(document.createElement('div').innerHTML += "<h1>Test</h1>");
-            rightDiv.innerHTML += "<div><h1>LOL</h1></div>"
+            rightDiv.innerHTML += `<div><h1>LOL</h1></div>
+                                    <div><h2>Humidity: <span id="humidRight"></span></h2></div>
+                                    
+                                    `
             rightDiv.innerHTML += "<div><h2 id='innerNodeFeel'></h2></div>"
             document.getElementById('innerNodeFeel').innerText += feelsLikeNode
+            document.getElementById('humidRight').innerText += humidNode
 
             rightDiv.append += "<h1>Test</h1>";
+
+            leftDiv.innerHTML += "<div><h1 id='degreesLeft'></h1></div>"
+            document.getElementById('degreesLeft').innerText += tempNode + '°C';
             // rightDiv.append(document.createElement('div').textContent = 'fffffffffff');
             // rightDiv.append(document.createElement('div').textContent = '645645544345');
 
