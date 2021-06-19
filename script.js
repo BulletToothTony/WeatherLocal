@@ -100,7 +100,8 @@ function renderArr() {
             document.getElementById('degreesLeft').setAttribute('id', locationsArr.length);
             document.getElementById('imgRight').setAttribute('id', locationsArr.length);
             document.getElementById('innerNodeFeel').setAttribute('id', locationsArr.length);
-
+            document.getElementById('weatherDescRight').setAttribute('id', locationsArr.length);
+            
             setData()
 
         }
@@ -114,11 +115,11 @@ function setData() {
 
 function restore() {
     if(!localStorage.locationsArr) {
-        render();
+        // render();
     }else {
         let objects = localStorage.getItem('locationsArr') // gets information from local storage to use in below loop to create DOM/display
-        objects = JSON.parse(objects);
-        locationsArr = objects;
+        objectsParse = JSON.parse(objects);
+        locationsArr = objectsParse;
         renderArr();
     }
 }
